@@ -1,55 +1,128 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" data-theme="conflict-mode-alpha">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>🌸 みんなでれんしゅう — ホーム 🌸</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+  <meta name="description" content="コンフリクト版 - 複雑な変更を含むバージョン" />
+  <meta name="author" content="Conflict Generator Alpha" />
+  <title>🔥 コンフリクトゾーン — メインページ 🔥</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/conflict-override.css" />
 </head>
 
-<body>
-  <header class="site-header">
-    <h1>🌸 みんなでれんしゅう 🌸</h1>
-    <nav>
-      <a href="index.html">🏠 ホーム</a>
-      <a href="practice.html">📚 れんしゅう</a>
-      <a href="about.html">❓ せつめい</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-
-      <h2>✨ みんなでいっしょにれんしゅうしよう！ ✨</h2>
-      <p>おへやをつくったり、おともだちとさんかしたりして、たのしくべんきょうできるよ♪</p>
-
-      <div class="create-join">
-        <input id="roomName" type="text" placeholder="おへやのなまえをいれてね（れい：えいごのへや）" />
-        <button id="createBtn">🎀 おへやをつくる</button>
-        <button id="joinBtn">💖 さんかする</button>
-
-      <h2>みんなで一緒に練習しよう</h2>
-      <p>ルームを作成したり、参加したりして、みんなでスキルを磨けます。</p>
-      <h3>相撲</h3>
-      <div class="create-join">
-        <input id="roomName" type="text" placeholder="ルーム名を入力（例: JavaScript会）" />
-        <button id="createBtn">ルームを作る</button>
-        <button id="joinBtn">選択して参加</button>
-        <button id="destroyBtn">あるいは破壊する</button>
-
+<body class="conflict-body-alpha">
+  <div class="page-wrapper-alpha">
+    <header class="site-header site-header--conflict-alpha">
+      <div class="header-inner-alpha">
+        <h1 class="logo-conflict-alpha">🔥 コンフリクトゾーン・アルファ 🔥</h1>
+        <p class="tagline-alpha">複雑性を追求するプラットフォーム</p>
       </div>
-    </section>
+      <nav class="nav-conflict-alpha">
+        <ul class="nav-list-alpha">
+          <li><a href="index.html" class="nav-link-alpha active-alpha">🏠 メイン</a></li>
+          <li><a href="practice.html" class="nav-link-alpha">📚 トレーニング</a></li>
+          <li><a href="about.html" class="nav-link-alpha">❓ 情報</a></li>
+          <li><a href="advanced.html" class="nav-link-alpha">🚀 上級者</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <section>
-      <h3>みんなのおへや</h3>
-      <ul id="roomList" class="room-list"></ul>
-    </section>
-  </main>
+    <main class="container container--alpha-layout">
+      <article class="hero hero--conflict-alpha">
+        <header class="hero-header-alpha">
+          <h2 class="hero-title-alpha">⚡ 複雑なコンフリクトへようこそ！ ⚡</h2>
+          <p class="hero-subtitle-alpha">このバージョンはアルファ版の大幅な構造変更を含みます</p>
+        </header>
+        
+        <div class="description-alpha">
+          <p class="intro-text-alpha">完全に再設計されたルーム作成システムをお楽しみください。</p>
+          <p class="sub-text-alpha">複数の参加者が同時に編集できる環境を提供します。</p>
+        </div>
 
-  <footer>© 2025 みんなでれんしゅう</footer>
+        <section class="create-join-section-alpha">
+          <h3 class="section-title-alpha">🎯 新規ルーム作成</h3>
+          <div class="create-join create-join--redesigned-alpha">
+            <div class="input-group-alpha">
+              <label for="roomNameAlpha" class="input-label-alpha">ルーム名</label>
+              <input id="roomNameAlpha" type="text" class="room-input-alpha" placeholder="コンフリクトルームの名前（例：開発チームA）" />
+            </div>
+            <div class="input-group-alpha">
+              <label for="roomDescription" class="input-label-alpha">説明</label>
+              <textarea id="roomDescription" class="room-textarea-alpha" placeholder="ルームの説明を入力..."></textarea>
+            </div>
+            <div class="button-group-alpha">
+              <button id="createBtnAlpha" class="btn-alpha btn-primary-alpha">🎀 新規作成</button>
+              <button id="joinBtnAlpha" class="btn-alpha btn-secondary-alpha">💖 参加</button>
+              <button id="advancedBtnAlpha" class="btn-alpha btn-tertiary-alpha">⚙️ 詳細設定</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="advanced-options-alpha" id="advancedOptions">
+          <h4 class="options-title-alpha">詳細設定パネル</h4>
+          <div class="options-grid-alpha">
+            <div class="option-item-alpha">
+              <label for="maxParticipants">最大参加者数</label>
+              <input type="number" id="maxParticipants" value="10" min="2" max="100" />
+            </div>
+            <div class="option-item-alpha">
+              <label for="roomType">ルームタイプ</label>
+              <select id="roomType">
+                <option value="public">公開</option>
+                <option value="private">非公開</option>
+                <option value="restricted">制限付き</option>
+              </select>
+            </div>
+            <div class="option-item-alpha">
+              <label for="enableChat">チャット有効化</label>
+              <input type="checkbox" id="enableChat" checked />
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <section class="room-section-alpha">
+        <header class="section-header-alpha">
+          <h3 class="section-title-alpha">🌟 アクティブルーム一覧</h3>
+          <div class="filter-controls-alpha">
+            <button class="filter-btn-alpha active">すべて</button>
+            <button class="filter-btn-alpha">公開</button>
+            <button class="filter-btn-alpha">非公開</button>
+          </div>
+        </header>
+        <ul id="roomListAlpha" class="room-list room-list--alpha-style"></ul>
+        <div class="pagination-alpha">
+          <button class="page-btn-alpha" disabled>← 前へ</button>
+          <span class="page-info-alpha">1 / 1</span>
+          <button class="page-btn-alpha" disabled>次へ →</button>
+        </div>
+      </section>
+
+      <aside class="sidebar-alpha">
+        <h4 class="sidebar-title-alpha">📊 統計情報</h4>
+        <ul class="stats-list-alpha">
+          <li>アクティブルーム: <span id="activeRoomCount">3</span></li>
+          <li>オンラインユーザー: <span id="onlineUserCount">15</span></li>
+          <li>本日の参加者: <span id="todayParticipants">42</span></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="footer-alpha">
+      <div class="footer-content-alpha">
+        <p class="copyright-alpha">© 2025 コンフリクトゾーン・アルファ版</p>
+        <nav class="footer-nav-alpha">
+          <a href="privacy.html">プライバシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
 
   <script src="js/app.js"></script>
+  <script src="js/conflict-features.js"></script>
 </body>
 
 </html>

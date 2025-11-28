@@ -1,32 +1,183 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" data-theme="conflict-mode-alpha">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>サイトについて</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+  <meta name="description" content="コンフリクトゾーン・アルファ版について - プロジェクト情報" />
+  <title>🔥 コンフリクトゾーンについて 🔥</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-  <header class="site-header">
-    <h1>このサイトについて</h1>
-    <nav>
-      <a href="index.html">ホーム</a>
-      <a href="practice.html">練習ルーム</a>
-    </nav>
-  </header>
+<body class="conflict-body-alpha about-page-alpha">
+  <div class="page-wrapper-alpha">
+    <header class="site-header site-header--conflict-alpha">
+      <div class="header-inner-alpha">
+        <h1 class="logo-conflict-alpha">🔥 プロジェクト情報 🔥</h1>
+        <p class="tagline-alpha">コンフリクトゾーン・アルファ版の詳細</p>
+      </div>
+      <nav class="nav-conflict-alpha">
+        <ul class="nav-list-alpha">
+          <li><a href="index.html" class="nav-link-alpha">🏠 メイン</a></li>
+          <li><a href="practice.html" class="nav-link-alpha">📚 トレーニング</a></li>
+          <li><a href="about.html" class="nav-link-alpha active-alpha">❓ 情報</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main class="container">
-    <h2>目的</h2>
-    <p>みんなで集まって練習や復習ができるシンプルな静的サイトです。リアルタイム機能はありませんが、画面上で簡単にルームを作成して共有できる構成になっています。</p>
+    <main class="container container--about-alpha">
+      <article class="about-content-alpha">
+        <section class="about-section-alpha intro-section-alpha">
+          <h2 class="section-heading-alpha">🎯 プロジェクト概要</h2>
+          <div class="content-block-alpha">
+            <p class="lead-text-alpha">
+              コンフリクトゾーン・アルファ版は、複雑なマージコンフリクトを学習するためのプラットフォームです。
+              実際のプロジェクトで遭遇するような、困難なコンフリクトシナリオを提供します。
+            </p>
+            <p>
+              本プロジェクトは教育目的で作成されており、Git のマージコンフリクト解決スキルを向上させることを目標としています。
+            </p>
+          </div>
+        </section>
 
-    <h3>拡張案</h3>
-    <ul>
-      <li>WebSocketでリアルタイム通信（zoom代わり）</li>
-      <li>ユーザー認証</li>
-      <li>課題・進捗トラッキング</li>
-    </ul>
-  </main>
+        <section class="about-section-alpha features-section-alpha">
+          <h2 class="section-heading-alpha">⚡ 主な機能（アルファ版）</h2>
+          <div class="features-grid-alpha">
+            <div class="feature-card-alpha">
+              <div class="feature-icon-alpha">🔥</div>
+              <h3>コンフリクト生成</h3>
+              <p>複数のファイルにまたがる複雑なコンフリクトを自動生成</p>
+            </div>
+            <div class="feature-card-alpha">
+              <div class="feature-icon-alpha">🏠</div>
+              <h3>ルーム管理</h3>
+              <p>リアルタイムでルームを作成・参加・管理可能</p>
+            </div>
+            <div class="feature-card-alpha">
+              <div class="feature-icon-alpha">📚</div>
+              <h3>トレーニングモード</h3>
+              <p>様々な難易度のコンフリクト解決練習が可能</p>
+            </div>
+            <div class="feature-card-alpha">
+              <div class="feature-icon-alpha">🏆</div>
+              <h3>実績システム</h3>
+              <p>学習進捗を可視化し、モチベーションを維持</p>
+            </div>
+            <div class="feature-card-alpha">
+              <div class="feature-icon-alpha">💬</div>
+              <h3>リアルタイムチャット</h3>
+              <p>参加者同士でコミュニケーション可能</p>
+            </div>
+            <div class="feature-card-alpha">
+              <div class="feature-icon-alpha">📊</div>
+              <h3>統計ダッシュボード</h3>
+              <p>パフォーマンスの詳細な分析を提供</p>
+            </div>
+          </div>
+        </section>
 
-  <footer>© 2025 みんなで練習</footer>
+        <section class="about-section-alpha roadmap-section-alpha">
+          <h2 class="section-heading-alpha">🗺️ ロードマップ</h2>
+          <div class="timeline-alpha">
+            <div class="timeline-item-alpha completed">
+              <div class="timeline-marker-alpha"></div>
+              <div class="timeline-content-alpha">
+                <h4>フェーズ1: 基盤構築</h4>
+                <p>基本的なUIとコンフリクト生成機能の実装</p>
+                <span class="timeline-date-alpha">完了</span>
+              </div>
+            </div>
+            <div class="timeline-item-alpha in-progress">
+              <div class="timeline-marker-alpha"></div>
+              <div class="timeline-content-alpha">
+                <h4>フェーズ2: アルファ版</h4>
+                <p>ルーム機能、チャット、実績システムの追加</p>
+                <span class="timeline-date-alpha">進行中</span>
+              </div>
+            </div>
+            <div class="timeline-item-alpha planned">
+              <div class="timeline-marker-alpha"></div>
+              <div class="timeline-content-alpha">
+                <h4>フェーズ3: ベータ版</h4>
+                <p>WebSocket によるリアルタイム同期</p>
+                <span class="timeline-date-alpha">計画中</span>
+              </div>
+            </div>
+            <div class="timeline-item-alpha planned">
+              <div class="timeline-marker-alpha"></div>
+              <div class="timeline-content-alpha">
+                <h4>フェーズ4: 正式リリース</h4>
+                <p>ユーザー認証、クラウド保存、API公開</p>
+                <span class="timeline-date-alpha">計画中</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-section-alpha tech-section-alpha">
+          <h2 class="section-heading-alpha">🛠️ 技術スタック</h2>
+          <div class="tech-grid-alpha">
+            <div class="tech-item-alpha">
+              <span class="tech-name-alpha">HTML5</span>
+              <span class="tech-version-alpha">セマンティック</span>
+            </div>
+            <div class="tech-item-alpha">
+              <span class="tech-name-alpha">CSS3</span>
+              <span class="tech-version-alpha">カスタムプロパティ</span>
+            </div>
+            <div class="tech-item-alpha">
+              <span class="tech-name-alpha">JavaScript</span>
+              <span class="tech-version-alpha">ES2020+</span>
+            </div>
+            <div class="tech-item-alpha">
+              <span class="tech-name-alpha">Git</span>
+              <span class="tech-version-alpha">バージョン管理</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-section-alpha team-section-alpha">
+          <h2 class="section-heading-alpha">👥 開発チーム</h2>
+          <div class="team-grid-alpha">
+            <div class="team-member-alpha">
+              <div class="member-avatar-alpha">🦊</div>
+              <h4>IGO(いぐお)</h4>
+              <p class="member-role-alpha">コアコントリビューター</p>
+              <a href="https://github.com/IGO-kon" class="member-link-alpha">@IGO-kon</a>
+            </div>
+            <div class="team-member-alpha">
+              <div class="member-avatar-alpha">🔥</div>
+              <h4>Conflict Generator</h4>
+              <p class="member-role-alpha">アルファ版担当</p>
+              <span class="member-link-alpha">Alpha Team</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-section-alpha contact-section-alpha">
+          <h2 class="section-heading-alpha">📬 お問い合わせ</h2>
+          <div class="contact-info-alpha">
+            <p>バグ報告、機能リクエスト、その他のお問い合わせは GitHub Issues をご利用ください。</p>
+            <div class="contact-links-alpha">
+              <a href="https://github.com/makimaki04192424-oss/sample20251128/issues" class="contact-link-alpha">
+                🐛 Issues
+              </a>
+              <a href="https://github.com/makimaki04192424-oss/sample20251128" class="contact-link-alpha">
+                📦 Repository
+              </a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer-alpha">
+      <div class="footer-content-alpha">
+        <p class="copyright-alpha">© 2025 コンフリクトゾーン・アルファ版</p>
+        <nav class="footer-nav-alpha">
+          <a href="privacy.html">プライバシー</a>
+          <a href="terms.html">利用規約</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

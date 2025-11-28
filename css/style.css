@@ -1,169 +1,722 @@
-:root{
-  /* ペールトーン（パステルカラー）で可愛らしいテーマ */
-  --accent:#FFB6C1; /* ライトピンク */
-  --accent-hover:#FF91A4; /* ホバー時のピンク */
-  --bg:linear-gradient(135deg, #FFF0F5 0%, #E6E6FA 50%, #F0FFF0 100%); /* ラベンダーブラッシュ→ラベンダー→ハニーデューのグラデーション */
-  --text:#6B5B73; /* やわらかい紫がかったグレー */
-  --card:#FFFFFF;
-  --card-border:#FFD1DC; /* 淡いピンクのボーダー */
-  --secondary:#B19CD9; /* 淡いラベンダー */
-  --mint:#98D8C8; /* ミントグリーン */
-  --peach:#FFDAB9; /* ピーチ */
-  font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", Meiryo, "Yu Gothic", sans-serif;
+/* ============================================
+   コンフリクトゾーン・アルファ版 スタイルシート
+   Version: 3.0.0-alpha
+   Author: Conflict Generator Alpha Team
+   Last Modified: 2025-11-28
+   ============================================ */
+
+:root {
+  /* アルファ版カラーパレット - ダークモード対応 */
+  --alpha-primary: #FF4500;       /* オレンジレッド */
+  --alpha-primary-dark: #CC3700;  /* ダークオレンジ */
+  --alpha-secondary: #1E90FF;     /* ドジャーブルー */
+  --alpha-secondary-dark: #1873CC;
+  --alpha-accent: #FFD700;        /* ゴールド */
+  --alpha-accent-dark: #CCA300;
+  --alpha-bg: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  --alpha-bg-card: rgba(30, 30, 50, 0.95);
+  --alpha-text-primary: #E8E8E8;
+  --alpha-text-secondary: #B0B0B0;
+  --alpha-text-accent: #FFD700;
+  --alpha-border: rgba(255, 69, 0, 0.5);
+  --alpha-border-focus: rgba(255, 215, 0, 0.8);
+  --alpha-shadow: 0 10px 40px rgba(255, 69, 0, 0.3);
+  --alpha-shadow-hover: 0 20px 60px rgba(255, 69, 0, 0.5);
+  
+  /* アルファ版タイポグラフィ */
+  --alpha-font-primary: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  --alpha-font-accent: 'Orbitron', 'Roboto Mono', monospace;
+  --alpha-font-size-base: 16px;
+  --alpha-font-size-lg: 1.25rem;
+  --alpha-font-size-xl: 1.5rem;
+  --alpha-font-size-2xl: 2rem;
+  --alpha-font-size-3xl: 2.5rem;
+  
+  /* アルファ版スペーシング */
+  --alpha-space-xs: 4px;
+  --alpha-space-sm: 8px;
+  --alpha-space-md: 16px;
+  --alpha-space-lg: 24px;
+  --alpha-space-xl: 32px;
+  --alpha-space-2xl: 48px;
+  
+  /* アルファ版ボーダー半径 */
+  --alpha-radius-sm: 4px;
+  --alpha-radius-md: 8px;
+  --alpha-radius-lg: 16px;
+  --alpha-radius-xl: 24px;
+  --alpha-radius-full: 9999px;
+  
+  /* アルファ版トランジション */
+  --alpha-transition-fast: 150ms ease;
+  --alpha-transition-normal: 300ms ease;
+  --alpha-transition-slow: 500ms ease;
+  
+  font-family: var(--alpha-font-primary);
+  font-size: var(--alpha-font-size-base);
 }
 
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);min-height:100vh}
+/* ============================================
+   リセットとベーススタイル（アルファ版）
+   ============================================ */
 
-/* ヘッダー - 可愛いグラデーション */
-.site-header{
-  display:flex;align-items:center;justify-content:space-between;padding:16px 24px;
-  background:linear-gradient(90deg, #FFE4EC, #E8D5F2, #D4F1F4);
-  border-bottom:3px solid var(--card-border);
-  box-shadow:0 4px 12px rgba(255,182,193,0.3)
-}
-.site-header h1{
-  font-size:1.6rem;
-  color:#FF91A4; /* フォールバックカラー */
-  background:linear-gradient(45deg, #FF91A4, #B19CD9, #98D8C8);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  text-shadow:none;
-}
-.site-header nav a{
-  margin-left:16px;color:#B19CD9;text-decoration:none;
-  font-weight:600;padding:6px 12px;border-radius:20px;
-  transition:all 0.3s ease;
-}
-.site-header nav a:hover{
-  background:rgba(255,182,193,0.3);color:#FF91A4;
-}
-
-.container{max-width:1000px;margin:32px auto;padding:0 20px}
-
-/* ヒーローセクション - 丸みのある可愛いカード */
-.hero{
-  background:var(--card);padding:32px;border-radius:24px;
-  box-shadow:0 8px 24px rgba(255,182,193,0.25);
-  border:2px solid var(--card-border);
-  position:relative;
-  overflow:hidden;
-}
-.hero::before{
-  content:"✿";position:absolute;top:12px;left:16px;font-size:24px;opacity:0.6;
-}
-.hero::after{
-  content:"♡";position:absolute;top:12px;right:16px;font-size:24px;opacity:0.6;color:var(--accent);
-}
-.hero h2{
-  color:#FF91A4;font-size:1.5rem;margin-bottom:12px;
-}
-.hero p{
-  color:var(--text);font-size:1.1rem;line-height:1.6;
-}
-
-/* フォーム要素 - 可愛くて使いやすい */
-.create-join{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.create-join input{
-  padding:12px 16px;border:2px solid var(--card-border);border-radius:20px;
-  width:50%;font-size:1rem;color:var(--text);
-  background:#FFF9FC;
-  transition:all 0.3s ease;
-}
-.create-join input:focus{
-  outline:none;border-color:var(--accent);
-  box-shadow:0 0 12px rgba(255,182,193,0.4);
-}
-.create-join input::placeholder{color:#C9B8D0}
-.create-join button{
-  padding:12px 20px;border-radius:25px;border:none;
-  background:linear-gradient(135deg, var(--accent), #FF91A4);
-  color:#fff;cursor:pointer;font-weight:600;font-size:0.95rem;
-  box-shadow:0 4px 12px rgba(255,145,164,0.4);
-  transition:all 0.3s ease;
-}
-.create-join button:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 16px rgba(255,145,164,0.5);
-  background:linear-gradient(135deg, #FF91A4, var(--secondary));
-}
-
-/* ルームリスト - 可愛いカード形式 */
-.room-list{list-style:none;padding-left:0;margin-top:16px}
-.room-list li{
-  background:linear-gradient(135deg, #FFF9FC, #F8F0FF);
-  padding:14px 18px;border-radius:16px;margin-bottom:12px;
-  display:flex;justify-content:space-between;align-items:center;
-  border:2px solid var(--card-border);
-  transition:all 0.3s ease;
-}
-.room-list li:hover{
-  transform:translateX(4px);
-  box-shadow:0 4px 12px rgba(177,156,217,0.25);
-  border-color:var(--secondary);
-}
-.room-list li span{font-weight:500}
-.room-list button{
-  padding:8px 16px;border-radius:20px;border:none;
-  background:linear-gradient(135deg, var(--secondary), #C9A7EB);
-  color:#fff;cursor:pointer;font-weight:600;font-size:0.9rem;
-  box-shadow:0 3px 8px rgba(177,156,217,0.35);
-  transition:all 0.3s ease;
-}
-.room-list button:hover{
-  transform:scale(1.05);
-  box-shadow:0 4px 12px rgba(177,156,217,0.5);
-}
-
-/* セクションタイトル */
-section h3{
-  color:var(--secondary);font-size:1.2rem;
-  display:flex;align-items:center;gap:8px;
-}
-section h3::before{content:"🌸"}
-
-/* 練習ページ用 */
-.room-grid{display:grid;grid-template-columns:220px 1fr;gap:20px}
-.sidebar{
-  background:linear-gradient(135deg, #FFF5F7, #F5F0FF);
-  padding:16px;border-radius:16px;border:2px solid var(--card-border);
-}
-.main-area{
-  background:var(--card);padding:16px;border-radius:16px;border:2px solid var(--card-border);
-}
-.chat-log{
-  height:180px;background:linear-gradient(135deg, #FFFAFA, #FFF5EE);
-  border:2px dashed var(--card-border);padding:12px;overflow:auto;border-radius:12px;margin-bottom:12px
-}
-.timer{margin-top:12px;font-weight:700;color:var(--accent);font-size:1.2rem}
-
-/* フッター - 可愛いデザイン */
-footer{
-  text-align:center;padding:20px;margin-top:32px;
-  color:var(--secondary);font-weight:500;
-  background:linear-gradient(90deg, #FFF0F5, #E8D5F2, #F0FFF0);
-  border-top:2px solid var(--card-border);
-}
-footer::before{content:"♡ "}
-footer::after{content:" ♡"}
-
-button:active{transform:translateY(1px)}
-
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--alpha-bg);
+  color: var(--alpha-text-primary);
   min-height: 100vh;
-  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.site-header {
+.conflict-body-alpha {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page-wrapper-alpha {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ============================================
+   ヘッダー（アルファ版完全再設計）
+   ============================================ */
+
+.site-header--conflict-alpha {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: var(--alpha-space-md) var(--alpha-space-xl);
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.98), rgba(22, 33, 62, 0.98));
+  border-bottom: 2px solid var(--alpha-border);
+  box-shadow: var(--alpha-shadow);
+  backdrop-filter: blur(12px);
+}
+
+.header-inner-alpha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--alpha-space-xs);
+}
+
+.logo-conflict-alpha {
+  font-family: var(--alpha-font-accent);
+  font-size: var(--alpha-font-size-2xl);
+  font-weight: 700;
+  color: var(--alpha-primary);
+  text-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+  letter-spacing: 2px;
+  animation: alpha-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes alpha-glow {
+  from { text-shadow: 0 0 20px rgba(255, 69, 0, 0.6); }
+  to { text-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 69, 0, 0.4); }
+}
+
+.tagline-alpha {
+  font-size: var(--alpha-font-size-base);
+  color: var(--alpha-text-secondary);
+  font-style: italic;
+}
+
+.nav-conflict-alpha {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list-alpha {
+  display: flex;
+  gap: var(--alpha-space-md);
+  list-style: none;
+}
+
+.nav-link-alpha {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--alpha-space-xs);
+  padding: var(--alpha-space-sm) var(--alpha-space-md);
+  color: var(--alpha-text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--alpha-radius-full);
+  border: 2px solid transparent;
+  transition: all var(--alpha-transition-normal);
+}
+
+.nav-link-alpha:hover, .nav-link-alpha.active-alpha {
+  color: var(--alpha-accent);
+  border-color: var(--alpha-accent);
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   コンテナとレイアウト（アルファ版）
+   ============================================ */
+
+.container--alpha-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  grid-template-rows: auto auto 1fr;
+  gap: var(--alpha-space-xl);
+  max-width: 1400px;
+  margin: var(--alpha-space-2xl) auto;
+  padding: 0 var(--alpha-space-xl);
+}
+
+/* ============================================
+   ヒーローセクション（アルファ版完全再設計）
+   ============================================ */
+
+.hero--conflict-alpha {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--alpha-space-lg);
+  padding: var(--alpha-space-2xl);
+  background: var(--alpha-bg-card);
+  border-radius: var(--alpha-radius-xl);
+  border: 2px solid var(--alpha-border);
+  box-shadow: var(--alpha-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--conflict-alpha::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--alpha-primary), var(--alpha-accent), var(--alpha-secondary));
+}
+
+.hero-header-alpha {
+  text-align: center;
+}
+
+.hero-title-alpha {
+  font-family: var(--alpha-font-accent);
+  font-size: var(--alpha-font-size-3xl);
+  color: var(--alpha-accent);
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  margin-bottom: var(--alpha-space-sm);
+}
+
+.hero-subtitle-alpha {
+  font-size: var(--alpha-font-size-lg);
+  color: var(--alpha-text-secondary);
+}
+
+.description-alpha {
+  padding: var(--alpha-space-lg);
+  background: rgba(255, 69, 0, 0.1);
+  border-radius: var(--alpha-radius-lg);
+  border-left: 4px solid var(--alpha-primary);
+}
+
+.intro-text-alpha {
+  font-size: var(--alpha-font-size-lg);
+  color: var(--alpha-text-primary);
+  margin-bottom: var(--alpha-space-sm);
+}
+
+.sub-text-alpha {
+  color: var(--alpha-text-secondary);
+}
+
+/* ============================================
+   フォーム要素（アルファ版完全再設計）
+   ============================================ */
+
+.create-join-section-alpha {
+  padding: var(--alpha-space-lg);
+  background: rgba(30, 144, 255, 0.1);
+  border-radius: var(--alpha-radius-lg);
+  border: 1px solid rgba(30, 144, 255, 0.3);
+}
+
+.section-title-alpha {
+  font-family: var(--alpha-font-accent);
+  font-size: var(--alpha-font-size-xl);
+  color: var(--alpha-secondary);
+  margin-bottom: var(--alpha-space-md);
+}
+
+.create-join--redesigned-alpha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--alpha-space-md);
+}
+
+.input-group-alpha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--alpha-space-xs);
+}
+
+.input-label-alpha {
+  font-size: var(--alpha-font-size-base);
+  color: var(--alpha-text-secondary);
+  font-weight: 500;
+}
+
+.room-input-alpha, .room-textarea-alpha {
+  padding: var(--alpha-space-md);
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--alpha-border);
+  border-radius: var(--alpha-radius-md);
+  color: var(--alpha-text-primary);
+  font-size: var(--alpha-font-size-base);
+  font-family: inherit;
+  transition: all var(--alpha-transition-normal);
+}
+
+.room-input-alpha:focus, .room-textarea-alpha:focus {
+  outline: none;
+  border-color: var(--alpha-border-focus);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.room-input-alpha::placeholder, .room-textarea-alpha::placeholder {
+  color: var(--alpha-text-secondary);
+  opacity: 0.7;
+}
+
+.room-textarea-alpha {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.button-group-alpha {
+  display: flex;
+  gap: var(--alpha-space-md);
+  flex-wrap: wrap;
+  margin-top: var(--alpha-space-sm);
+}
+
+.btn-alpha {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--alpha-space-sm);
+  padding: var(--alpha-space-md) var(--alpha-space-xl);
+  border: none;
+  border-radius: var(--alpha-radius-full);
+  font-size: var(--alpha-font-size-base);
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--alpha-transition-normal);
+}
+
+.btn-primary-alpha {
+  background: linear-gradient(135deg, var(--alpha-primary), var(--alpha-primary-dark));
+  color: white;
+  box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
+}
+
+.btn-primary-alpha:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 69, 0, 0.6);
+}
+
+.btn-secondary-alpha {
+  background: linear-gradient(135deg, var(--alpha-secondary), var(--alpha-secondary-dark));
+  color: white;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
+}
+
+.btn-secondary-alpha:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.6);
+}
+
+.btn-tertiary-alpha {
+  background: transparent;
+  color: var(--alpha-accent);
+  border: 2px solid var(--alpha-accent);
+}
+
+.btn-tertiary-alpha:hover {
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   詳細設定パネル（アルファ版新機能）
+   ============================================ */
+
+.advanced-options-alpha {
+  padding: var(--alpha-space-lg);
+  background: rgba(255, 215, 0, 0.05);
+  border-radius: var(--alpha-radius-lg);
+  border: 1px dashed var(--alpha-accent);
+  margin-top: var(--alpha-space-md);
+}
+
+.options-title-alpha {
+  font-size: var(--alpha-font-size-lg);
+  color: var(--alpha-accent);
+  margin-bottom: var(--alpha-space-md);
+}
+
+.options-grid-alpha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--alpha-space-md);
+}
+
+.option-item-alpha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--alpha-space-xs);
+}
+
+.option-item-alpha label {
+  font-size: 0.9rem;
+  color: var(--alpha-text-secondary);
+}
+
+.option-item-alpha input, .option-item-alpha select {
+  padding: var(--alpha-space-sm) var(--alpha-space-md);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--alpha-border);
+  border-radius: var(--alpha-radius-md);
+  color: var(--alpha-text-primary);
+  font-size: var(--alpha-font-size-base);
+}
+
+/* ============================================
+   ルームリスト（アルファ版完全再設計）
+   ============================================ */
+
+.room-section-alpha {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  padding: var(--alpha-space-xl);
+  background: var(--alpha-bg-card);
+  border-radius: var(--alpha-radius-xl);
+  border: 2px solid var(--alpha-border);
+  box-shadow: var(--alpha-shadow);
+}
+
+.section-header-alpha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--alpha-space-lg);
+  padding-bottom: var(--alpha-space-md);
+  border-bottom: 1px solid rgba(255, 69, 0, 0.2);
+}
+
+.filter-controls-alpha {
+  display: flex;
+  gap: var(--alpha-space-sm);
+}
+
+.filter-btn-alpha {
+  padding: var(--alpha-space-sm) var(--alpha-space-md);
+  background: transparent;
+  border: 1px solid var(--alpha-border);
+  border-radius: var(--alpha-radius-full);
+  color: var(--alpha-text-secondary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--alpha-transition-fast);
+}
+
+.filter-btn-alpha:hover, .filter-btn-alpha.active {
+  background: var(--alpha-primary);
+  color: white;
+  border-color: var(--alpha-primary);
+}
+
+.room-list--alpha-style {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--alpha-space-md);
+  list-style: none;
+}
+
+.room-list--alpha-style li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--alpha-space-sm);
+  padding: var(--alpha-space-lg);
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(30, 144, 255, 0.1));
+  border-radius: var(--alpha-radius-lg);
+  border: 2px solid transparent;
+  transition: all var(--alpha-transition-normal);
+  cursor: pointer;
+}
+
+.room-list--alpha-style li:hover {
+  border-color: var(--alpha-accent);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--alpha-shadow-hover);
+}
+
+.room-list--alpha-style li span {
+  font-weight: 600;
+  color: var(--alpha-text-primary);
+  font-size: var(--alpha-font-size-lg);
+}
+
+.room-list--alpha-style button {
+  padding: var(--alpha-space-sm) var(--alpha-space-lg);
+  background: linear-gradient(135deg, var(--alpha-secondary), var(--alpha-secondary-dark));
+  border: none;
+  border-radius: var(--alpha-radius-full);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--alpha-transition-normal);
+}
+
+.room-list--alpha-style button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.5);
+}
+
+.pagination-alpha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--alpha-space-lg);
+  margin-top: var(--alpha-space-xl);
+  padding-top: var(--alpha-space-md);
+  border-top: 1px solid rgba(255, 69, 0, 0.2);
+}
+
+.page-btn-alpha {
+  padding: var(--alpha-space-sm) var(--alpha-space-md);
+  background: transparent;
+  border: 2px solid var(--alpha-border);
+  border-radius: var(--alpha-radius-md);
+  color: var(--alpha-text-primary);
+  cursor: pointer;
+  transition: all var(--alpha-transition-fast);
+}
+
+.page-btn-alpha:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-btn-alpha:not(:disabled):hover {
+  background: var(--alpha-primary);
+  border-color: var(--alpha-primary);
+}
+
+.page-info-alpha {
+  color: var(--alpha-text-secondary);
+}
+
+/* ============================================
+   サイドバー（アルファ版新機能）
+   ============================================ */
+
+.sidebar-alpha {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+  padding: var(--alpha-space-xl);
+  background: var(--alpha-bg-card);
+  border-radius: var(--alpha-radius-xl);
+  border: 2px solid var(--alpha-border);
+  box-shadow: var(--alpha-shadow);
+}
+
+.sidebar-title-alpha {
+  font-family: var(--alpha-font-accent);
+  font-size: var(--alpha-font-size-lg);
+  color: var(--alpha-accent);
+  margin-bottom: var(--alpha-space-lg);
+  padding-bottom: var(--alpha-space-sm);
+  border-bottom: 2px solid var(--alpha-accent);
+}
+
+.stats-list-alpha {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--alpha-space-md);
+}
+
+.stats-list-alpha li {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--alpha-space-md);
+  background: rgba(255, 69, 0, 0.1);
+  border-radius: var(--alpha-radius-md);
+  color: var(--alpha-text-secondary);
+}
+
+.stats-list-alpha span {
+  font-weight: 700;
+  color: var(--alpha-primary);
+}
+
+/* ============================================
+   セクションタイトル（アルファ版）
+   ============================================ */
+
+section h3 {
+  color: var(--alpha-secondary);
+  font-size: var(--alpha-font-size-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--alpha-space-sm);
+}
+
+section h3::before {
+  content: "🔥";
+}
+
+/* ============================================
+   練習ページ用（アルファ版完全再設計）
+   ============================================ */
+
+.room-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr 300px;
+  gap: var(--alpha-space-xl);
+}
+
+.sidebar {
+  background: var(--alpha-bg-card);
+  padding: var(--alpha-space-xl);
+  border-radius: var(--alpha-radius-xl);
+  border: 2px solid var(--alpha-border);
+  box-shadow: var(--alpha-shadow);
+}
+
+.sidebar h4 {
+  font-family: var(--alpha-font-accent);
+  color: var(--alpha-accent);
+  margin-bottom: var(--alpha-space-md);
+}
+
+.main-area {
+  background: var(--alpha-bg-card);
+  padding: var(--alpha-space-xl);
+  border-radius: var(--alpha-radius-xl);
+  border: 2px solid var(--alpha-border);
+  box-shadow: var(--alpha-shadow);
+}
+
+.chat-log {
+  height: 240px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--alpha-border);
+  padding: var(--alpha-space-md);
+  overflow: auto;
+  border-radius: var(--alpha-radius-lg);
+  margin-bottom: var(--alpha-space-md);
+  color: var(--alpha-text-primary);
+}
+
+.timer {
+  margin-top: var(--alpha-space-md);
+  font-family: var(--alpha-font-accent);
+  font-weight: 700;
+  color: var(--alpha-primary);
+  font-size: var(--alpha-font-size-2xl);
+  text-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+}
+
+/* ============================================
+   フッター（アルファ版完全再設計）
+   ============================================ */
+
+.footer-alpha {
+  margin-top: auto;
+  padding: var(--alpha-space-xl) var(--alpha-space-2xl);
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.98), rgba(22, 33, 62, 0.98));
+  border-top: 2px solid var(--alpha-border);
+}
+
+.footer-content-alpha {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--alpha-space-md);
+}
+
+.copyright-alpha {
+  color: var(--alpha-text-secondary);
+}
+
+.footer-nav-alpha {
+  display: flex;
+  gap: var(--alpha-space-lg);
+}
+
+.footer-nav-alpha a {
+  color: var(--alpha-text-secondary);
+  text-decoration: none;
+  transition: color var(--alpha-transition-fast);
+}
+
+.footer-nav-alpha a:hover {
+  color: var(--alpha-accent);
+}
+
+/* 旧フッター互換性 */
+footer {
+  text-align: center;
+  padding: var(--alpha-space-xl);
+  margin-top: var(--alpha-space-2xl);
+  color: var(--alpha-text-secondary);
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.98), rgba(22, 33, 62, 0.98));
+  border-top: 2px solid var(--alpha-border);
+}
+
+footer::before { content: "🔥 "; }
+footer::after { content: " 🔥"; }
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* ============================================
+   以下のスタイルは削除予定（アルファ版では非推奨）
+   Legacy styles - deprecated in alpha version
+   ============================================ */
+
+/* 古いリセット - アルファ版で置き換え済み */
+
+/* 旧body - アルファ版で置き換え済み
+   以下はフォールバック用に残す */
+
+/* 旧ヘッダー - アルファ版で置き換え済み */
+.site-header-legacy {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 20px;
@@ -171,20 +724,20 @@ body {
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.site-header h1 {
+.site-header-legacy h1 {
   color: #fff;
   font-size: 2.5em;
   margin-bottom: 15px;
   animation: shimmer 3s infinite;
 }
 
-.site-header nav {
+.site-header-legacy nav {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-.site-header nav a {
+.site-header-legacy nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -193,18 +746,20 @@ body {
   border-radius: 20px;
 }
 
-.site-header nav a:hover {
+.site-header-legacy nav a:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.1);
 }
 
-.container {
+/* 旧コンテナ - アルファ版で置き換え済み */
+.container-legacy {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-.hero {
+/* 旧ヒーロー - アルファ版で置き換え済み */
+.hero-legacy {
   background: rgba(255, 255, 255, 0.95);
   padding: 40px;
   border-radius: 20px;
@@ -214,7 +769,7 @@ body {
   animation: fadeInUp 0.8s ease;
 }
 
-.hero h2 {
+.hero-legacy h2 {
   font-size: 2em;
   margin-bottom: 15px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -223,7 +778,7 @@ body {
   background-clip: text;
 }
 
-.hero p {
+.hero-legacy p {
   font-size: 1.1em;
   color: #666;
   margin-bottom: 30px;
