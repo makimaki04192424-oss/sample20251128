@@ -1,5 +1,29 @@
 (() => {
+  copilot/change-top-page-for-girls
+  const sampleRooms = ['🌈 あさのえいご', '📖 もじのれんしゅう', '🎵 うたのへや']
+  // コナミコマンド (↑↑↓↓←→←→BA)
+  const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+  let konamiIndex = 0;
+
+  document.addEventListener('keydown', (e) => {
+    if (e.code === konamiCode[konamiIndex]) {
+      konamiIndex++;
+      if (konamiIndex === konamiCode.length) {
+        konamiIndex = 0;
+        launchGradius();
+      }
+    } else {
+      konamiIndex = 0;
+    }
+  });
+
+  function launchGradius() {
+    // グラディウス（海外名：Nemesis）を起動
+    window.open('https://appsweets.net/gradius/index.html', '_blank', 'noopener,noreferrer');
+  }
+
   const sampleRooms = ['朝の英語練習', 'JS もくもく', '発音トレーニング'];
+feature-Nemesis
   const isIndex = location.pathname.endsWith('index.html') || location.pathname.endsWith('/');
   const roomListEl = document.getElementById('roomList');
 
@@ -9,7 +33,7 @@
       roomListEl.innerHTML = '';
       sampleRooms.forEach(name => {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${name}</span><div><button class="join" data-room="${name}">参加</button></div>`;
+        li.innerHTML = `<span>${name}</span><div><button class="join" data-room="${name}">💖 さんか</button></div>`;
         roomListEl.appendChild(li);
       });
       document.querySelectorAll('.join').forEach(b => b.addEventListener('click', e => {
@@ -22,7 +46,7 @@
 
     document.getElementById('createBtn').addEventListener('click', () => {
       const name = document.getElementById('roomName').value.trim();
-      if (!name) return alert('ルーム名を入力してください');
+      if (!name) return alert('おへやのなまえをいれてね！');
       sampleRooms.push(name);
       render();
       document.getElementById('roomName').value = '';
