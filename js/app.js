@@ -318,7 +318,8 @@
 
     if (activeCountEl) activeCountEl.textContent = STATE_ALPHA.rooms.length;
     if (onlineCountEl) onlineCountEl.textContent = STATE_ALPHA.rooms.reduce((sum, r) => sum + r.participants, 0);
-    if (todayCountEl) todayCountEl.textContent = Math.floor(Math.random() * 50) + 20;
+    // 本日の参加者は現在のルーム参加者の合計 + 固定値で表示（デモ用）
+    if (todayCountEl) todayCountEl.textContent = STATE_ALPHA.rooms.reduce((sum, r) => sum + r.participants, 0) + 20;
   }
 
   function escapeHtml(text) {

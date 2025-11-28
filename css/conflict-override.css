@@ -1,0 +1,349 @@
+/* ============================================
+   コンフリクトオーバーライド スタイルシート
+   Version: 3.0.0-alpha
+   Author: Conflict Generator Alpha Team
+   
+   このファイルは複雑なコンフリクトを発生させるために
+   意図的に追加されたオーバーライドスタイルです
+   ============================================ */
+
+/* アルファ版追加オーバーライド */
+.conflict-mode-activated {
+  animation: conflict-pulse 1s infinite;
+}
+
+@keyframes conflict-pulse {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(30deg);
+  }
+}
+
+/* プラクティスページ追加スタイル */
+.practice-page-alpha .container--practice-alpha {
+  grid-template-columns: 260px 1fr 280px;
+}
+
+.sidebar-right-alpha {
+  padding: var(--alpha-space-xl, 32px);
+  background: var(--alpha-bg-card, rgba(30, 30, 50, 0.95));
+  border-radius: var(--alpha-radius-xl, 24px);
+  border: 2px solid var(--alpha-border, rgba(255, 69, 0, 0.5));
+  box-shadow: var(--alpha-shadow, 0 10px 40px rgba(255, 69, 0, 0.3));
+}
+
+.achievements-section-alpha,
+.leaderboard-section-alpha {
+  margin-bottom: var(--alpha-space-lg, 24px);
+}
+
+.achievements-list-alpha,
+.leaderboard-list-alpha {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-item-alpha {
+  padding: var(--alpha-space-sm, 8px) var(--alpha-space-md, 16px);
+  margin-bottom: var(--alpha-space-sm, 8px);
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: var(--alpha-radius-md, 8px);
+  font-size: 0.9rem;
+}
+
+.achievement-item-alpha.unlocked {
+  color: var(--alpha-accent, #FFD700);
+}
+
+.achievement-item-alpha.locked {
+  color: var(--alpha-text-secondary, #B0B0B0);
+  opacity: 0.6;
+}
+
+.leaderboard-list-alpha li {
+  padding: var(--alpha-space-sm, 8px) 0;
+  color: var(--alpha-text-primary, #E8E8E8);
+  font-size: 0.9rem;
+}
+
+/* タイマー警告アニメーション */
+.timer-warning-alpha {
+  animation: timer-warning 0.5s infinite;
+  color: #FF4500 !important;
+}
+
+@keyframes timer-warning {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* プログレスバー */
+.progress-bar-alpha {
+  height: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--alpha-radius-full, 9999px);
+  overflow: hidden;
+  margin: var(--alpha-space-md, 16px) 0;
+}
+
+.progress-fill-alpha {
+  height: 100%;
+  background: linear-gradient(90deg, var(--alpha-primary, #FF4500), var(--alpha-accent, #FFD700));
+  border-radius: var(--alpha-radius-full, 9999px);
+  transition: width 0.3s ease;
+}
+
+.progress-stats-alpha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--alpha-text-secondary, #B0B0B0);
+}
+
+.progress-stats-alpha strong {
+  color: var(--alpha-primary, #FF4500);
+}
+
+/* Aboutページ追加スタイル */
+.about-page-alpha .container--about-alpha {
+  max-width: 900px;
+}
+
+.about-content-alpha {
+  background: var(--alpha-bg-card, rgba(30, 30, 50, 0.95));
+  border-radius: var(--alpha-radius-xl, 24px);
+  border: 2px solid var(--alpha-border, rgba(255, 69, 0, 0.5));
+  padding: var(--alpha-space-2xl, 48px);
+}
+
+.about-section-alpha {
+  margin-bottom: var(--alpha-space-2xl, 48px);
+}
+
+.section-heading-alpha {
+  font-family: var(--alpha-font-accent, 'Orbitron', monospace);
+  font-size: var(--alpha-font-size-xl, 1.5rem);
+  color: var(--alpha-accent, #FFD700);
+  margin-bottom: var(--alpha-space-lg, 24px);
+  padding-bottom: var(--alpha-space-sm, 8px);
+  border-bottom: 2px solid var(--alpha-border, rgba(255, 69, 0, 0.5));
+}
+
+.lead-text-alpha {
+  font-size: var(--alpha-font-size-lg, 1.25rem);
+  color: var(--alpha-text-primary, #E8E8E8);
+  line-height: 1.8;
+  margin-bottom: var(--alpha-space-md, 16px);
+}
+
+/* 機能グリッド */
+.features-grid-alpha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--alpha-space-lg, 24px);
+}
+
+.feature-card-alpha {
+  padding: var(--alpha-space-xl, 32px);
+  background: rgba(255, 69, 0, 0.1);
+  border-radius: var(--alpha-radius-lg, 16px);
+  border: 1px solid var(--alpha-border, rgba(255, 69, 0, 0.5));
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card-alpha:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--alpha-shadow-hover, 0 20px 60px rgba(255, 69, 0, 0.5));
+}
+
+.feature-icon-alpha {
+  font-size: 2.5rem;
+  margin-bottom: var(--alpha-space-md, 16px);
+}
+
+.feature-card-alpha h3 {
+  color: var(--alpha-secondary, #1E90FF);
+  margin-bottom: var(--alpha-space-sm, 8px);
+}
+
+.feature-card-alpha p {
+  color: var(--alpha-text-secondary, #B0B0B0);
+  font-size: 0.9rem;
+}
+
+/* タイムライン */
+.timeline-alpha {
+  position: relative;
+  padding-left: var(--alpha-space-xl, 32px);
+}
+
+.timeline-alpha::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--alpha-border, rgba(255, 69, 0, 0.5));
+}
+
+.timeline-item-alpha {
+  position: relative;
+  margin-bottom: var(--alpha-space-lg, 24px);
+}
+
+.timeline-marker-alpha {
+  position: absolute;
+  left: calc(-32px + 4px);
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--alpha-primary, #FF4500);
+  border: 2px solid var(--alpha-bg-card, rgba(30, 30, 50, 0.95));
+}
+
+.timeline-item-alpha.completed .timeline-marker-alpha {
+  background: #00FF00;
+}
+
+.timeline-item-alpha.in-progress .timeline-marker-alpha {
+  background: var(--alpha-accent, #FFD700);
+  animation: pulse 2s infinite;
+}
+
+.timeline-item-alpha.planned .timeline-marker-alpha {
+  background: var(--alpha-text-secondary, #B0B0B0);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+  }
+}
+
+.timeline-content-alpha h4 {
+  color: var(--alpha-text-primary, #E8E8E8);
+  margin-bottom: var(--alpha-space-xs, 4px);
+}
+
+.timeline-content-alpha p {
+  color: var(--alpha-text-secondary, #B0B0B0);
+  font-size: 0.9rem;
+  margin-bottom: var(--alpha-space-xs, 4px);
+}
+
+.timeline-date-alpha {
+  font-size: 0.8rem;
+  color: var(--alpha-secondary, #1E90FF);
+}
+
+/* 技術スタック */
+.tech-grid-alpha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--alpha-space-md, 16px);
+}
+
+.tech-item-alpha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--alpha-space-lg, 24px);
+  background: rgba(30, 144, 255, 0.1);
+  border-radius: var(--alpha-radius-lg, 16px);
+  border: 1px solid rgba(30, 144, 255, 0.3);
+}
+
+.tech-name-alpha {
+  font-weight: 700;
+  color: var(--alpha-secondary, #1E90FF);
+  margin-bottom: var(--alpha-space-xs, 4px);
+}
+
+.tech-version-alpha {
+  font-size: 0.8rem;
+  color: var(--alpha-text-secondary, #B0B0B0);
+}
+
+/* チームセクション */
+.team-grid-alpha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--alpha-space-lg, 24px);
+}
+
+.team-member-alpha {
+  text-align: center;
+  padding: var(--alpha-space-xl, 32px);
+  background: rgba(255, 69, 0, 0.05);
+  border-radius: var(--alpha-radius-lg, 16px);
+  border: 1px solid var(--alpha-border, rgba(255, 69, 0, 0.5));
+}
+
+.member-avatar-alpha {
+  font-size: 3rem;
+  margin-bottom: var(--alpha-space-md, 16px);
+}
+
+.team-member-alpha h4 {
+  color: var(--alpha-text-primary, #E8E8E8);
+  margin-bottom: var(--alpha-space-xs, 4px);
+}
+
+.member-role-alpha {
+  color: var(--alpha-text-secondary, #B0B0B0);
+  font-size: 0.9rem;
+  margin-bottom: var(--alpha-space-sm, 8px);
+}
+
+.member-link-alpha {
+  color: var(--alpha-secondary, #1E90FF);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.member-link-alpha:hover {
+  color: var(--alpha-accent, #FFD700);
+}
+
+/* 連絡先セクション */
+.contact-info-alpha p {
+  color: var(--alpha-text-secondary, #B0B0B0);
+  margin-bottom: var(--alpha-space-lg, 24px);
+}
+
+.contact-links-alpha {
+  display: flex;
+  gap: var(--alpha-space-md, 16px);
+  flex-wrap: wrap;
+}
+
+.contact-link-alpha {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--alpha-space-sm, 8px);
+  padding: var(--alpha-space-md, 16px) var(--alpha-space-xl, 32px);
+  background: linear-gradient(135deg, var(--alpha-secondary, #1E90FF), #1873CC);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--alpha-radius-full, 9999px);
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-link-alpha:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.5);
+}
