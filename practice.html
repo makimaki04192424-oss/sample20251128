@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="site-header">
-    <h1 id="roomTitle">練習ルーム</h1>
+    <h1 id="roomTitle">練習ルーム（国別対抗戦）</h1>
     <nav>
       <a href="index.html">ホーム</a>
       <a href="practice.html">練習ルーム</a>
@@ -18,33 +18,59 @@
 
   <main class="container room-grid">
     <aside class="sidebar">
-      <h4>参加者</h4>
+      <h4>国別チーム</h4>
+      <p class="hint">
+        参加するチームを選んで「チームに参加」ボタンを押してください。<br>
+        地球代表でも、宇宙人代表でもOKです 👽
+      </p>
+
+      <!-- 国・星を選ぶセレクトを追加 -->
+      <select id="countrySelect">
+        <option value="jp">日本代表チーム</option>
+        <option value="us">アメリカ代表チーム</option>
+        <option value="eu">ヨーロッパ連合チーム</option>
+        <option value="asia">アジア連合チーム</option>
+        <option value="africa">アフリカ連合チーム</option>
+        <option value="latam">中南米チーム</option>
+        <option value="oceania">オセアニアチーム</option>
+        <option value="mars">火星代表チーム</option>
+        <option value="jupiter">木星衛星チーム</option>
+        <option value="andromeda">アンドロメダ銀河連合チーム</option>
+      </select>
+
       <ul id="participants"></ul>
-      <button id="addParticipant">自分を追加</button>
+      <button id="addParticipant">このチームで参加</button>
     </aside>
 
     <section class="main-area">
       <div class="exercise">
         <h3>課題</h3>
         <select id="exerciseSelect">
-          <option value="coding">コーディングチャレンジ</option>
-          <option value="speed">スピード反復</option>
-          <option value="quiz">クイズ</option>
+          <option value="coding">コーディングチャレンジ（お題を実装）</option>
+          <option value="speed">スピード反復（小変更を連続で）</option>
+          <option value="quiz">クイズ：Git & GitHubテスト</option>
+          <option value="review">コードレビュー道場（他人のコードを読む）</option>
+          <option value="debug">バグハンティング（バグを探して修正）</option>
+          <option value="design">デザインアップデート（UIを少し良くする）</option>
+          <option value="refactor">リファクタリングチャレンジ（同じ動きでコード短縮）</option>
+          <option value="pair-typing">ペアタイピング（同じお題を皆で同時に）</option>
+          <option value="git-battle">Gitコマンド早押しバトル（ログ・ブランチ操作など）</option>
+          <option value="alien-mission">宇宙人からのミッション（謎仕様を読み解く）</option>
         </select>
         <button id="startBtn">練習開始</button>
         <div id="timer" class="timer">00:00</div>
       </div>
 
       <div class="chat">
-        <h4>チャット</h4>
+        <h4>チャット（作戦会議）</h4>
         <div id="chatLog" class="chat-log"></div>
-        <input id="chatInput" placeholder="メッセージを入力..." />
+        <input id="chatInput" placeholder="チームへのメッセージを入力..." />
         <button id="sendChat">送信</button>
       </div>
     </section>
   </main>
 
-  <footer>© 2025 みんなで練習</footer>
+  <footer>© 2025 国別＆宇宙連合 練習ルーム</footer>
   <script src="js/app.js"></script>
 </body>
 </html>
