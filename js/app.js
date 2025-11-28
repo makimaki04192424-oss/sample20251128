@@ -1,5 +1,5 @@
 (() => {
-  const sampleRooms = ['朝の英語練習', 'JS もくもく', '発音トレーニング'];
+  const sampleRooms = ['🌈 あさのえいご', '📖 もじのれんしゅう', '🎵 うたのへや'];
   const isIndex = location.pathname.endsWith('index.html') || location.pathname.endsWith('/');
   const roomListEl = document.getElementById('roomList');
 
@@ -9,7 +9,7 @@
       roomListEl.innerHTML = '';
       sampleRooms.forEach(name => {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${name}</span><div><button class="join" data-room="${name}">参加</button></div>`;
+        li.innerHTML = `<span>${name}</span><div><button class="join" data-room="${name}">💖 さんか</button></div>`;
         roomListEl.appendChild(li);
       });
       document.querySelectorAll('.join').forEach(b => b.addEventListener('click', e => {
@@ -22,7 +22,7 @@
 
     document.getElementById('createBtn').addEventListener('click', () => {
       const name = document.getElementById('roomName').value.trim();
-      if (!name) return alert('ルーム名を入力してください');
+      if (!name) return alert('おへやのなまえをいれてね！');
       sampleRooms.push(name);
       render();
       document.getElementById('roomName').value = '';
