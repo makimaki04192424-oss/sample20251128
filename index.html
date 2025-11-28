@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>みんなで練習 — ホーム</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>みんなで練習</h1>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="practice.html">練習ルーム</a>
+      <a href="about.html">説明</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>みんなで一緒に練習しよう</h2>
+      <p>ルームを作成したり、参加したりして、みんなでスキルを磨けます。</p>
+
+      <div class="create-join">
+        <input id="roomName" type="text" placeholder="ルーム名を入力（例: JavaScript会）" />
+        <button id="createBtn">ルームを作る</button>
+        <button id="joinBtn">選択して参加</button>
+      </div>
+    </section>
+
+    <section>
+      <h3>公開中の練習ルーム</h3>
+      <ul id="roomList" class="room-list"></ul>
+    </section>
+  </main>
+
+  <footer>© 2025 みんなで練習</footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>練習ルーム</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 id="roomTitle">練習ルーム</h1>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="practice.html">練習ルーム</a>
+      <a href="about.html">説明</a>
+    </nav>
+  </header>
+
+  <main class="container room-grid">
+    <aside class="sidebar">
+      <h4>参加者</h4>
+      <ul id="participants"></ul>
+      <button id="addParticipant">自分を追加</button>
+    </aside>
+
+    <section class="main-area">
+      <div class="exercise">
+        <h3>課題</h3>
+        <select id="exerciseSelect">
+          <option value="coding">コーディングチャレンジ</option>
+          <option value="speed">スピード反復</option>
+          <option value="quiz">クイズ</option>
+        </select>
+        <button id="startBtn">練習開始</button>
+        <div id="timer" class="timer">00:00</div>
+      </div>
+
+      <div class="chat">
+        <h4>チャット</h4>
+        <div id="chatLog" class="chat-log"></div>
+        <input id="chatInput" placeholder="メッセージを入力..." />
+        <button id="sendChat">送信</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 みんなで練習</footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

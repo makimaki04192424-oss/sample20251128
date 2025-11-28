@@ -1,0 +1,24 @@
+:root{
+  --accent:#4CAF50; --bg:#f7f7f8; --text:#222;
+  --card:#ffffff;
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text)}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(90deg,#fff,#f0f0f0);border-bottom:1px solid #e5e5e5}
+.site-header nav a{margin-left:14px;color:#333;text-decoration:none}
+.container{max-width:1000px;margin:28px auto;padding:0 16px}
+.hero{background:var(--card);padding:24px;border-radius:8px;box-shadow:0 6px 18px rgba(20,20,20,0.06)}
+.create-join{margin-top:12px}
+.create-join input{padding:8px;border:1px solid #ddd;border-radius:6px;width:45%}
+.create-join button{margin-left:8px;padding:8px 12px;border-radius:6px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+.room-list{list-style:none;padding-left:0;margin-top:12px}
+.room-list li{background:var(--card);padding:8px 12px;border-radius:6px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;border:1px solid #eee}
+.room-grid{display:grid;grid-template-columns:220px 1fr;gap:18px}
+.sidebar{background:var(--card);padding:12px;border-radius:10px;border:1px solid #eee}
+.main-area{background:var(--card);padding:12px;border-radius:10px;border:1px solid #eee}
+.chat-log{height:180px;background:#fafafa;border:1px dashed #eee;padding:8px;overflow:auto;border-radius:6px;margin-bottom:8px}
+.timer{margin-top:10px;font-weight:700;color:var(--accent)}
+footer{text-align:center;padding:16px;margin-top:24px;color:#666}
+button:active{transform:translateY(1px)}
