@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">コンテンツに移動</a>
   <header class="site-header">
     <h1>このサイトについて</h1>
     <nav>
@@ -15,16 +16,19 @@
     </nav>
   </header>
 
-  <main class="container">
-    <h2>目的</h2>
+  <main id="main" class="container">
+    <div class="section-card">
+      <h2>目的</h2>
     <p>みんなで集まって練習や復習ができるシンプルな静的サイトです。リアルタイム機能はありませんが、画面上で簡単にルームを作成して共有できる構成になっています。</p>
-
-    <h3>拡張案</h3>
-    <ul>
-      <li>WebSocketでリアルタイム通信（zoom代わり）</li>
-      <li>ユーザー認証</li>
-      <li>課題・進捗トラッキング</li>
-    </ul>
+    </div>
+    <div class="section-card">
+      <h3>拡張案</h3>
+      <ul>
+        <li>WebSocketでリアルタイム通信（zoom代わり）</li>
+        <li>ユーザー認証</li>
+        <li>課題・進捗トラッキング</li>
+      </ul>
+    </div>
   </main>
 
   <footer>© 2025 みんなで練習</footer>

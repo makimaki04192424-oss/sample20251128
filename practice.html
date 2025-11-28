@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">コンテンツに移動</a>
   <header class="site-header">
     <h1 id="roomTitle">練習ルーム</h1>
     <nav>
@@ -16,7 +17,7 @@
     </nav>
   </header>
 
-  <main class="container room-grid">
+  <main id="main" class="container room-grid">
     <aside class="sidebar">
       <h4>参加者</h4>
       <ul id="participants"></ul>
@@ -24,7 +25,7 @@
     </aside>
 
     <section class="main-area">
-      <div class="exercise">
+      <div class="exercise section-card">
         <h3>課題</h3>
         <select id="exerciseSelect">
           <option value="coding">コーディングチャレンジ</option>
@@ -35,7 +36,7 @@
         <div id="timer" class="timer">00:00</div>
       </div>
 
-      <div class="chat">
+      <div class="chat section-card">
         <h4>チャット</h4>
         <div id="chatLog" class="chat-log"></div>
         <input id="chatInput" placeholder="メッセージを入力..." />
