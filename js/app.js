@@ -1,6 +1,4 @@
 (() => {
-  copilot/change-top-page-for-girls
-  const sampleRooms = ['🌈 あさのえいご', '📖 もじのれんしゅう', '🎵 うたのへや']
   // コナミコマンド (↑↑↓↓←→←→BA)
   const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
   let konamiIndex = 0;
@@ -22,8 +20,7 @@
     window.open('https://appsweets.net/gradius/index.html', '_blank', 'noopener,noreferrer');
   }
 
-  const sampleRooms = ['朝の英語練習', 'JS もくもく', '発音トレーニング'];
-feature-Nemesis
+  const sampleRooms = ['🌈 あさのえいご', '📖 もじのれんしゅう', '🎵 うたのへや'];
   const isIndex = location.pathname.endsWith('index.html') || location.pathname.endsWith('/');
   const roomListEl = document.getElementById('roomList');
 
