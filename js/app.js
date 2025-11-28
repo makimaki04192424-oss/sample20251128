@@ -17,7 +17,7 @@
 
   function launchGradius() {
     // グラディウス（海外名：Nemesis）を起動
-    window.open('https://archive.org/embed/nemesis_msx', '_blank', 'noopener,noreferrer');
+    window.open('https://appsweets.net/gradius/index.html', '_blank', 'noopener,noreferrer');
   }
 
   const sampleRooms = ['朝の英語練習', 'JS もくもく', '発音トレーニング'];
