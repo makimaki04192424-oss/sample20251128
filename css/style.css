@@ -2,14 +2,14 @@
   /* ペールトーン（パステルカラー）で可愛らしいテーマ */
   --accent:#FFB6C1; /* ライトピンク */
   --accent-hover:#FF91A4; /* ホバー時のピンク */
-  --bg:linear-gradient(135deg, #FFF0F5 0%, #E6E6FA 50%, #F0FFF0 100%); /* ラベンダーブラッシュからラベンダーへのグラデーション */
+  --bg:linear-gradient(135deg, #FFF0F5 0%, #E6E6FA 50%, #F0FFF0 100%); /* ラベンダーブラッシュ→ラベンダー→ハニーデューのグラデーション */
   --text:#6B5B73; /* やわらかい紫がかったグレー */
   --card:#FFFFFF;
   --card-border:#FFD1DC; /* 淡いピンクのボーダー */
   --secondary:#B19CD9; /* 淡いラベンダー */
   --mint:#98D8C8; /* ミントグリーン */
   --peach:#FFDAB9; /* ピーチ */
-  font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", Meiryo, "Comic Sans MS", sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", Meiryo, "Yu Gothic", sans-serif;
 }
 
 *{box-sizing:border-box}
@@ -24,6 +24,7 @@ body{margin:0;background:var(--bg);color:var(--text);min-height:100vh}
 }
 .site-header h1{
   font-size:1.6rem;
+  color:#FF91A4; /* フォールバックカラー */
   background:linear-gradient(45deg, #FF91A4, #B19CD9, #98D8C8);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
